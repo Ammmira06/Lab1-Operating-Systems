@@ -1,23 +1,69 @@
-# Laboratory Work 1
-## Files and Directories
+# Лабораторная работа №1
+## Файлы и каталоги
 
-**Subject:** Operating Systems
+**Дисциплина:** Операционные системы
 
-### Objective
-Learning to work with the file system using
-Linux system calls and shell commands.
+### Цель работы
+Изучить основные операции работы с файлами и каталогами в операционной системе Linux с использованием системных вызовов языка C++ и команд оболочки Bash.
 
-### Tasks
-1. Create directories and files using C++.
-2. Create hard and symbolic links.
-3. Write a Shell script.
-4. Write a C++ program to delete the structure.
+### Выполненные задания
 
-### Technologies
-- C++
-- Linux
-- Shell Script
-- GitHub Codespaces
+В рамках лабораторной работы реализованы:
 
-### Author
-Amira
+1. **create.cpp** - программа на C++, создающая структуру каталогов и файлов.
+2. **delete.cpp** - программа на C++, удаляющая созданную структуру.
+3. **create.sh** - Bash-скрипт, создающий аналогичную структуру с помощью команд оболочки.
+
+### Создаваемая структура
+
+```text
+Lab1_Amira/
+├── Documents/
+│   ├── notes.txt
+│   └── empty.txt
+├── Data/
+│   ├── random.bin
+│   └── zeros.bin
+├── Archive/
+│   └── notes_copy.txt
+└── Documents_link -> Documents
+```
+
+### Используемые операции
+
+- Создание каталогов и файлов.
+- Запись текстовых данных.
+- Создание файла со случайными данными и файла, заполненного нулями.
+- Создание жёстких и символических ссылок.
+- Удаление файлов и каталогов.
+
+### Компиляция программ
+
+```bash
+g++ -std=c++17 -Wall -Wextra create.cpp -o create_lab
+g++ -std=c++17 -Wall -Wextra delete.cpp -o delete_lab
+```
+
+### Запуск
+
+Создание структуры с помощью C++:
+
+```bash
+./create_lab
+```
+
+Создание структуры с помощью Bash:
+
+```bash
+bash create.sh
+```
+
+Удаление структуры:
+
+```bash
+./delete_lab
+```
+
+### Результат
+
+Все три программы успешно проверены в среде Linux (GitHub Codespaces). Создание и удаление структуры каталогов выполняются корректно.
